@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="number" id="number1" value="Nhập số"/>
+    <input type="number" id="number2" value="Nhập số"/><br><br>
+    <button onclick="cong()">Addition(+)</button>
+    <button onclick="tru()">Subtraction(-)</button>
+    <button onclick="nhan()">Multiplication(x)</button>
+    <button onclick="chia()">Division(/)</button><br>
+    <p id="result"></p>
+</form>
+<script>
+    function cong() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+        let cong= Number(a) + Number(b);
+        document.getElementById("result").innerHTML=("Result Addition: " + cong);
+    }
+    function tru() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+        let tru= Number(a) - Number(b);
+        document.getElementById("result").innerHTML=("Result Subtraction: " + tru);
+    }
+    function nhan() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+        let nhan= Number(a) * Number(b);
+        document.getElementById("result").innerHTML=("Result Multiplication: " + nhan);
+    }
+    function chia() {
+        let a = document.getElementById("number1").value;
+        let b = document.getElementById("number2").value;
+        let chia= Number(a) / Number(b);
+        document.getElementById("result").innerHTML=("Result Division: " + chia);
+    }
+</script>
+</body>
+</html>
