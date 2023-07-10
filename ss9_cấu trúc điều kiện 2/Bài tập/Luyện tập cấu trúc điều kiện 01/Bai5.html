@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập điểm bài kiểm tra");
+    let b = +prompt ("Nhập điểm thi giữa kỳ");
+    let c = +prompt ("Nhập điểm thi cuối kỳ");
+    let diemTrungbinh = (a+b*2+c*3)/6;
+    if (diemTrungbinh >=8){
+        document.write("Học sinh giỏi");
+    }else if(diemTrungbinh >=6.5){
+        document.write("Học sinh khá");
+    }else if(diemTrungbinh >=5){
+        document.write("Học sinh trung bình");
+    }else{
+        document.write("Học sinh yếu");
+    }
+</script>
+</body>
+</html>
