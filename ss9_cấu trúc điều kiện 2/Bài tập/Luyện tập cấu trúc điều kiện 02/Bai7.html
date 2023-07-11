@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt("Nhập số a");
+    let b = +prompt("Nhập số b");
+    let c = +prompt("Nhập số c");
+    let delta = b*b-4*a*c;
+    if (a == 0) {
+        document.write("Nhập lại số a")
+    } else if (delta < 0) {
+        document.write("Phương trình vô nghiệm")
+    } else if (delta == 0) {
+        document.write("x là: " + (-b / (2 * a)));
+    } else {
+        document.write("x là: " + ((-b + Math.pow(delta, 0.5)) / (2 * a)));
+        document.write("<br/>")
+        document.write("x là: " + ((-b - Math.pow(delta, 0.5)) / (2 * a)));
+    }
+
+
+</script>
+
+</body>
+</html>

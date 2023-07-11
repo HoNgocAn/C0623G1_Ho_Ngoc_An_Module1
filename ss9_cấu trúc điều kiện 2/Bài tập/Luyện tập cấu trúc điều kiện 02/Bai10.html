@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let kWh = +prompt("Nhập số kWh");
+    let theTotalamount1= kWh*3000;
+    let theTotalamount2= kWh*5000;
+    let theTotalamount3= kWh*7000;
+        if (kWh<50){
+            document.write(theTotalamount1 + "VNĐ")
+        } else if (kWh<150) {
+            document.write(theTotalamount2 + "VNĐ")
+        } else {
+            document.write(theTotalamount3 + "VNĐ")
+        }
+</script>
+
+</body>
+</html>

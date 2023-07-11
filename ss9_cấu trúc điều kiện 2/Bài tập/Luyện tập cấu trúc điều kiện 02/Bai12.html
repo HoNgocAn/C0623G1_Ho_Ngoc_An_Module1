@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let money = +prompt("Số tiền gửi");
+  let month = +prompt("Số tháng");
+  let laiSuat1= (money*month*0.02);
+  let laiSuat2= (money*month*0.04);
+  let laiSuat3= (money*month*0.08);
+    if (month<=3){
+        document.write("Số tiền lãi: " + laiSuat1 + "VNĐ");
+    } else if (month<=6){
+        document.write("Số tiền lãi: " + laiSuat2 + "VNĐ");
+    } else {
+        document.write("Số tiền lãi: " + laiSuat3 + "VNĐ");
+  }
+</script>
+
+</body>
+</html>

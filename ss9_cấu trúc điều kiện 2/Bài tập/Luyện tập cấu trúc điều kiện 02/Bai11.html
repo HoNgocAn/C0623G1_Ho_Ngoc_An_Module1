@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let income = +prompt("Thu nhập cá nhân");
+    let tax1 = income*0.1;
+    let tax2 = income*0.2;
+    let tax3 = income*0.3;
+        if (income<100000000) {
+            document.write(tax1 + "VNĐ")
+        } else if (income<500000000) {
+            document.write(tax2 + "VNĐ")
+        } else {
+            document.write(tax3 + "VNĐ")
+        }
+</script>
+
+</body>
+</html>
