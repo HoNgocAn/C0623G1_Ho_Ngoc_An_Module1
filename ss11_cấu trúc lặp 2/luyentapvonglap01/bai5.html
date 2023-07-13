@@ -6,19 +6,16 @@
 </head>
 <body>
 <script>
-    let a = 0;
-    let b = 1;
-    let c;
-    let num = 0;
-    for (let x = 1; x <= 20; x++) {
-        c = a + b;
-        b = a;
-        a = c;
-        document.write(c + '<br/>');
-        num += c;
-
+    let i1 = 0;
+    let i2 = 1;
+    let sum = i1+ i2;
+    for (let count = 2; count <20 ; count++) {
+        i3 = i1 + i2;
+        sum = sum + i3
+        i1 = i2;
+        i2 = i3;
     }
-    document.write('Tổng 20 số là: ' + num);
+    document.write('Tổng 20 số là: ' + sum);
 </script>
 </body>
 </html>
