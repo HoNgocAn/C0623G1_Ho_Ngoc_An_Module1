@@ -7,13 +7,18 @@
 <body>
 <script>
     let nhietDo = +prompt("Nhập nhiệt độ");
-    while (nhietDo>=20 && nhietDo<=100) {
-        nhietDo = +prompt("Nhập nhiệt lại độ");
-    } if (nhietDo>100) {
-        document.write("Đề nghị giảm nhiệt độ");
-    } else if (nhietDo<20) {
-        document.write("Đề nghị tăng nhiệt độ");
+    do {
+        if (nhietDo>100) {
+        alert("Vui lòng giảm nhiệt độ");
+        nhietDo = +prompt("Nhập lại nhiệt độ");
+    } else if (nhietDo<20){
+        alert("Vui lòng tăng nhiệt độ");
+        nhietDo = +prompt("Nhập lại nhiệt độ");
+    } else {
+        document.write("Nhiệt độ ổn định")
+        break;
     }
+    } while (true)
 </script>
 
 </body>
