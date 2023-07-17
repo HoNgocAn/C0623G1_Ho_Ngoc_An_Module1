@@ -7,14 +7,21 @@
 <body>
 <script>
     let v = +prompt("Nhập số nguyên")
-    let array = [1,-2,24,65,3,9,11,4,-10,50];
-    for (let i=0; i<array.length; i++){
-        if(array[i]==v){
-            console.log(array);
-            array.splice(i,1)
+    let array = [1,2,3,4,5,6,7,8,9,10];
+    let index = -1;
+    for (let i=0; i<array.length; i++) {
+        if (array[i] === v) {
+            index = i;
+            break;
         }
     }
-    document.write(array);
+    if (index != 1){
+        for (let j=index; j<array.length-1; j++){
+            array[j] = array[j+1];
+        }
+        array[array.length-1] = 0
+    }
+    document.write(array)
 </script>
 </body>
 </html>
