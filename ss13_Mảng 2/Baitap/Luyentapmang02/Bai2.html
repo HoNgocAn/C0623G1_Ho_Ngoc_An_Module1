@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<scripT>
+    let a = ["c","s","c","2","6","1"]
+    let first = 0
+    let last = a.length-1
+    while (first<last){
+        soDau = a[last];
+        a[last] = a[first];
+        a[first] = soDau;
+        first++;
+        last--;
+    }
+    document.write(a)
+</script>
+</body>
+</html>

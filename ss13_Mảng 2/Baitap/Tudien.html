@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    Nhập từ:
+    <input type="text" id="tuKhoa" >
+    <button onclick="dich()" type="button">Dịch</button>
+    <p id="result"></p>
+</form>
+<script>
+    let a = ["apple", "banana"];
+    let b = ["táo", "chuối"];
+    let apple = "apple";
+    let banana = "banana";
+    function dich(){
+        let tuKhoa = document.getElementById("tuKhoa").value;
+        switch (tuKhoa){
+            case apple:
+                document.getElementById("result").innerHTML = "táo";
+                break;
+            case banana:
+                document.getElementById("result").innerHTML = "chuói";
+                break;
+            default:
+                document.getElementById("result").innerHTML = "Không tìm thấy";
+        }
+    }
+
+
+</script>
+</body>
+</html>
