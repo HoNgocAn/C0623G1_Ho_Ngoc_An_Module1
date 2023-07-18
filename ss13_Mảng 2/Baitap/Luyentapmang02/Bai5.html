@@ -10,15 +10,18 @@
     let b = prompt("Nhập chuỗi b")
     let arr = a.split(" ");
     let brr = b.split(" ");
+    let count = 0
     for ( let i=0; i<arr.length; i++) {
         if (arr[i] !== brr[i]) {
-            document.write("Hai chuỗi trên không giống nhau");
-            break;
-        }else{
-            document.write("Hai chuỗi trên giống nhau");
-            break;
+            count = count + 1;
         }
     }
+    if (count>0){
+        document.write("Hai chuỗi trên không giống nhau ");
+    } else {
+        document.write("Hai chuỗi trên giống nhau ");
+    }
+
 </script>
 </body>
 </html>
