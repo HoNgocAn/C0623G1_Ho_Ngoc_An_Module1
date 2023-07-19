@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let arr1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let arr2 = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    let name = prompt("Nhập tên ");
+
+    function findStarName(name) {
+        let index = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            if (name === arr1[i]) {
+                index++;
+                return arr2[i];
+            }
+        }
+        if (index < 1) {
+            return "Đây là ngôi sao cần tìm";
+        }
+    }
+    let result = findStarName(name);
+    document.write(result);
+
+</script>
 
 
 </body>
