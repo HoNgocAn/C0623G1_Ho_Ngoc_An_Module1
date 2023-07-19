@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number = +prompt("Nhập độ dài cạnh")
+    function calculate(n){
+        acreage = Math.pow(2,n)*3.14
+        return acreage
+    }
+    let result = calculate(number);
+    document.write("Diện tích hình tròn là: " + result);
+</script>
+</br>
+<script>
+    let number1= +prompt("Nhập độ dài cạnh")
+    function calculate(n){
+        perimeter = 2*n*3.14
+        return perimeter
+    }
+    let result1 = calculate(number);
+    document.write("Chu vi hình tròn là: " + result1);
+</script>
+
+
+</body>
+</html>
