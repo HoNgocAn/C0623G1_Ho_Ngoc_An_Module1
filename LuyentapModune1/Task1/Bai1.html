@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let salary = +prompt("Nhập số lương");
+  if (salary>=15000000){
+      result = salary - salary*20/100;
+  }else if(salary>=7000000){
+      result = salary - salary*10/100;
+  }else{
+      result = salary - salary*5/100;
+  }
+  document.write("Số lương thực sự được nhận là: " + result);
+</script>
+</body>
+</html>
