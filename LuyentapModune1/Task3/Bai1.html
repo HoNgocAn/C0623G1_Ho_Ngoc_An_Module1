@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let length = +prompt("Nhập độ dài của mảng");
+    for (let i=0;i<length;i++){
+        a[i]= +prompt("Nhập phần từ mảng a");
+    }
+    let b = [];
+    let total = 0;
+    for (let i=0;i<length;i++){
+        total = total + a[i];
+        b[i] = total;
+    }
+    document.write(b)
+
+</script>
+</body>
+</html>

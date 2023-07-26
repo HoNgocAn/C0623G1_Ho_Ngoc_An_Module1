@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ol>
+    <li>Cafe</li><span>Giá 20.000VND</span>
+    <li>Cam vắt</li><span>Giá 20.000VND</span>
+    <li>Nước ép cà rốt</li><span>Giá 20.000VND</span>
+    <li>Nước ép cà chua</li><span>Giá 20.000VND</span>
+    <li>Nước lọc</li><span>Giá 20.000VND</span>
+    <li>Nước dừa</li><span>Giá 20.000VND</span>
+    <li>Dừng chọn món</li>
+</ol>
+<script>
+    let a = +prompt("Nhập số có trong danh sách món")
+    do{
+        if(a===7){
+            break;
+        }else if(a>7||a<0){
+            a = +prompt("Đề nghị nhập lại số có trong danh sách món");
+        } else{
+            b = +prompt("Nhập số lượng");
+            document.write("Giá tiền tổng là: " + 20000*b + "VNĐ");
+            a = +prompt("Nhập tiếp số để chọn món");
+        }
+    }while(true)
+</script>
+</body>
+</html>
