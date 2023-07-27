@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = "abcabdf";
+    let b = "abce"
+    let arr = a.split("");
+    let arr1 = b.split("");
+    let array = [];
+    for (let i=0;i<arr.length;i++) {
+        for (let j=0; j<arr1.length; j++)
+        if (arr[i]==arr1[j]){
+            array.push(arr[i]);
+        }
+    }
+    for (let h=0;h<array.length;h++) {
+        for ( let k=0;k<array.length;k++){
+            if (array[h] == array[k] && h!=k) {
+                array.splice(k, 1);
+            }
+        }
+    }
+    document.write("Các phần tử giống nhau ở hai mảng trên là: " + array);
+</script>
+</body>
+</html>
