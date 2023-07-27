@@ -7,15 +7,16 @@
 <body>
 <ol>
     <li>Cafe</li><span>Giá 20.000VND</span>
-    <li>Cam vắt</li><span>Giá 20.000VND</span>
-    <li>Nước ép cà rốt</li><span>Giá 20.000VND</span>
-    <li>Nước ép cà chua</li><span>Giá 20.000VND</span>
-    <li>Nước lọc</li><span>Giá 20.000VND</span>
+    <li>Cam vắt</li><span>Giá 30.000VND</span>
+    <li>Nước ép cà rốt</li><span>Giá 30.000VND</span>
+    <li>Nước ép cà chua</li><span>Giá 30.000VND</span>
+    <li>Nước lọc</li><span>Giá 10.000VND</span>
     <li>Nước dừa</li><span>Giá 20.000VND</span>
     <li>Dừng chọn món</li>
 </ol>
 <script>
     let a = +prompt("Nhập số có trong danh sách món")
+    let gia = [20000,30000,30000,30000,10000,20000]
     do{
         if(a===7){
             break;
@@ -23,7 +24,7 @@
             a = +prompt("Đề nghị nhập lại số có trong danh sách món");
         } else{
             b = +prompt("Nhập số lượng");
-            document.write("Giá tiền tổng là: " + 20000*b + "VNĐ");
+            document.write("Tổng số tiền cho món " + a + " là: " + gia[a-1]*b + "VNĐ" + "</br>");
             a = +prompt("Nhập tiếp số để chọn món");
         }
     }while(true)
