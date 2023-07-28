@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="themHocVien()"> Thêm học viên</button>
+<button onclick="suaHocVien()"> Sửa thông tin học viên </button>
+<button onclick="xoaHocVien()"> Xóa học viên </button>
+<br>
+<br>
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+    <tr>
+        <th>Mã Học Viên</th>
+        <th>Tên</th>
+        <th>Lớp</th>
+        <th>Email</th>
+        <th>Ngày Sinh</th>
+    </tr>
+    </thead>
+    <tbody id="result"></tbody>
+</table>
+<script>
+    class Hocvien {
+        constructor(idhv, name, classhv, email, birthday) {
+            this.idhv = idhv;
+            this.name = name;
+            this.classhv = classhv;
+            this.email = email;
+            this.birthday = birthday;
+        }
+    }
+
+    let hV1 = new Hocvien("HV-0001", "Nguyễn Văn A", "C1022G1", "nguyenvana@gmail.com", "01/01/2002");
+    let hV2 = new Hocvien("HV-0002", "Nguyễn Văn B", "C1022G2", "nguyenvanb@gmail.com", "01/01/2003");
+    let hV3 = new Hocvien("HV-0003", "Nguyễn Thị C", "C1022G3", "nguyenthic@gmail.com", "01/01/2003");
+
+    let hocVienList = [hV1, hV2, hV3];
+
+    function displayHocVien(arr) {
+        let result = "";
+        for (let i = 0; i < arr.length; i++) {
+            result += "<tr>" +
+                "<td>" + arr[i].idhv + "</td>" +
+                "<td>" + arr[i].name + "</td>" +
+                "<td>" + arr[i].classhv + "</td>" +
+                "<td>" + arr[i].email + "</td>" +
+                "<td>" + arr[i].birthday + "</td>" +
+                "</tr>";
+        }
+        document.getElementById("result").innerHTML = result;
+    }
+
+    displayHocVien(hocVienList);
+
+    function themHocVien() {
+        let newId = prompt("Nhập mã học viên:");
+        let newName = prompt("Nhập tên học viên:");
+        let newClass = prompt("Nhập lớp:");
+        let newEmail = prompt("Nhập email:");
+        let newBirthday = prompt("Nhập ngày sinh:");
+        let newStudent = new HocVien(newId, newName, newClass, newEmail, newBirthday);
+        hocVienList.push(newStudent);
+        displayHocVien(hocVienList);
+    }
+
+    function suaHocVien() {
+        let idHocVien = prompt("Nhập mã học viên cần sửa thông tin:");
+        let count = 0;
+        for (let i = 0; i < hocVienList.length; i++) {
+            if (idHocVien === hocVienList[i].idhv) {
+                hocVienList[i].name = prompt("Nhập lại tên học viên:");
+                hocVienList[i].classhv = prompt("Nhập lại lớp cho học viên:");
+                hocVienList[i].email = prompt("Nhập lại email cho học viên:");
+                hocVienList[i].birthday = prompt("Nhập lại ngày sinh cho viên:");
+                count++;
+            }
+        }
+        if (count === 0) {
+            alert("Mã học viên không tồn tại");
+        }
+        displayHocVien(hocVienList);
+    }
+
+    function xoaHocVien() {
+        let idHocVien = prompt("Nhập mã học viên cần xóa");
+        let count = 0;
+        for (let i = 0; i < hocVienList.length; i++) {
+            if (idHocVien === hocVienList[i].idhv) {
+                hocVienList.splice(i, 1);
+                count++;
+            }
+        }
+        if (count === 0) {
+            alert("Mã học viên không tồn tại");
+        }
+        displayHocVien(hocVienList);
+    }
+</script>
+</body>
+</html>
