@@ -14,9 +14,12 @@
     <li>Nước dừa</li><span>Giá 20.000VND</span>
     <li>Dừng chọn món</li>
 </ol>
+    <button onclick ="goiMon()">Gọi món</button>
 <script>
+    function goiMon(){
     let a = +prompt("Nhập số có trong danh sách món")
-    let gia = [20000,30000,30000,30000,10000,20000]
+    let gia = [20000,30000,30000,30000,10000,20000];
+    let sum = 0
     do{
         if(a===7){
             break;
@@ -24,10 +27,13 @@
             a = +prompt("Đề nghị nhập lại số có trong danh sách món");
         } else{
             b = +prompt("Nhập số lượng");
-            document.write("Tổng số tiền cho món " + a + " là: " + gia[a-1]*b + "VNĐ" + "</br>");
+            alert("Tổng số tiền phải trả cho món " + a + " là:  " + gia[a-1]*b + "VNĐ")
+            sum = sum + gia[a-1]*b;
             a = +prompt("Nhập tiếp số để chọn món");
         }
     }while(true)
+        document.write("Tổng số tiền là: " + sum)
+    }
 </script>
 </body>
 </html>

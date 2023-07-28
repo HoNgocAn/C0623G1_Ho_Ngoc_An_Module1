@@ -8,15 +8,15 @@
 <script>
     let array1 = [5,2,5];
     let array2 = [6,3,4];
-    let index;
+    let index = 0;
     let max = array1[0]/array2[0];
-    for (let i=0; i<array1.length; i++ ) {
+    for (let i=1; i<array1.length; i++ ) {
         if ((array1[i] / array2[i]) > max){
-            max= array1[i]/array2[i];
+            max = array1[i]/array2[i];
             index = i;
         }
     }
-    document.write("Phân số lớn nhất là: " + max + "</br>");
+    document.write("Phân số lớn nhất là: " + array1[index] + "/" + array2[index] + "</br>");
     document.write("Có chỉ số là: "+ index);
 </script>
 </body>
