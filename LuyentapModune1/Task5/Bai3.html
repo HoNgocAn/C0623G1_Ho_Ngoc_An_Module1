@@ -5,6 +5,33 @@
     <title>Title</title>
 </head>
 <body>
-
+<script>
+    let a = +prompt("Nhập độ dài của mảng lớn");
+    let b = +prompt("Nhập độ dài của mảng nhỏ");
+    let arr =  []
+    for (let i=0; i<a; i++){
+        arr[i] = []
+        for (let j=0; j<b; j++){
+            arr[i][j] = +prompt("Nhập các phẩn tử trong mảng");
+        }
+    }
+    function find(){
+        let min = arr[0][0];
+        let max = arr[0][0];
+        for (let i=0; i<arr.length;i++){
+            for (let j=0; j<arr[i].length;j++){
+                if (arr[i][j]>max){
+                    max = arr[i][j];
+                }
+                if (arr[i][j]<min){
+                    min = arr[i][j];
+                }
+            }
+        }
+        document.write("Phần tử lớn nhất trong mảng là: " + max + "</br>");
+        document.write("Phân từ nhỏ nhất trong mảng là: " + min);
+    }
+    find(arr)
+</script>
 </body>
 </html>

@@ -6,16 +6,35 @@
 </head>
 <body>
 <script>
-  let a = +prompt("Nhập độ dài của mảng lớn");
-  let b = +prompt("Nhập độ dài của mảng nhỏ");
-  let array = [];
-  let sum = 0;
-  for (let i=0; i<a;i++){
-    array[i] = [];
-    for (let j=0 ; j<b; j++){
-      array[i][j] = +prompt("Nhập các phẩn tử của mảng");
+    let a = +prompt("Nhập độ dài của mảng lớn");
+    let b = +prompt("Nhập độ dài của mảng nhỏ");
+    let array = [];
+    for (let i=0; i<a; i++){
+        array[i] = [];
+        for (let j=0;j<b;j++){
+            array[i][j] = +prompt("Nhập các phần tử trong mảng");
+        }
     }
-  }
+    function listed(array) {
+        let arr = [];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                let count = 0;
+                for (let h = 0; h < array[i][j]; h++) {
+                    if (array[i][j]<2){
+                        continue;
+                }else if (array[i][j] % h === 0) {
+                        count = count + 1;
+                    }
+                }
+                if (count === 1) {
+                    arr.push(array[i][j])
+                }
+            }
+        }
+        document.write("Số nguyên tố trong mảng là: " + arr + "</br>")
+    }
+    listed(array)
 </script>
 </body>
 </html>
