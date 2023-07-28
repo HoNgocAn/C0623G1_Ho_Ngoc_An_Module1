@@ -22,6 +22,8 @@
     let sum = 0
     do{
         if(a===7){
+            confirm("Bạn muốn dừng việc chọn món?")
+            alert("Tổng số tiền phải trả cho tất cả các món là: " + sum)
             break;
         }else if(a>7||a<0){
             a = +prompt("Đề nghị nhập lại số có trong danh sách món");
@@ -32,7 +34,6 @@
             a = +prompt("Nhập tiếp số để chọn món");
         }
     }while(true)
-        document.write("Tổng số tiền là: " + sum)
     }
 </script>
 </body>
